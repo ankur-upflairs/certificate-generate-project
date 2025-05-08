@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/upload', uploadRouter);
+app.use('/', uploadRouter);
 app.use('/pdf/', pdfRouter);
 
 // Create uploads directory if it doesn't exist

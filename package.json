@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "npx nodemon ./bin/www",
-    "startN": "node ./bin/www"
+    
+    "start": "node ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -19,7 +19,6 @@
     "multer": "^1.4.5-lts.2",
     "node-html-to-image": "^5.0.0",
     "p-limit": "^6.2.0",
-    "pdfkit": "^0.17.1",
     "xlsx": "^0.18.5"
   }
 }
