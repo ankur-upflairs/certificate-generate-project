@@ -1,0 +1,82 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <style>
+    .certificate {
+      position: relative;
+      width: 3508px;
+    }
+
+    .text {
+      position: absolute;
+      top: 41.5%;
+      left: 23%;
+      border: 1px solid black;
+      width: 54%;
+      text-align: center;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      font-size: 174px;
+      font-family: "Allura", cursive;
+      font-weight: 400;
+      font-style: normal;
+      color: #1B1464;
+    }
+
+    .enroll {
+      position: absolute;
+      top: 91%;
+      left: 31%;
+      border: 1px solid black;
+      height: 70px;
+      font-size: 72px;
+      font-family: "Montserrat", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+    }
+  </style>
+</head>
+
+<body>
+  <label for="name">Name</label>
+  <input type="text" id="name" /><br />
+  <label for="enrollment id">enrollment id</label>
+  <input type="text" id="enrollment" /><br />
+  <button id="check">check</button>
+  <button id="generate">Generate</button><br />
+  <div class="certificate">
+    <img src="/images/masterclass.png" alt="" />
+    <div class="text"></div>
+    <div class="enroll"></div>
+  </div>
+  <script>
+    document.getElementById("check").addEventListener("click", () => {
+      const
+        name = document.getElementById("name").value; const enrollment =
+          document.getElementById("enrollment").value; const text =
+            document.querySelector(".text"); const enroll =
+              document.querySelector(".enroll"); if (name) {
+                text.innerText = `${name}`;
+              } if (enrollment) { enroll.innerHTML = `Enrollment No.: ${enrollment}`; }
+    }); let generate = document.getElementById("generate");
+    generate.addEventListener("click", () => {
+      const name =
+        document.getElementById("name").value; const enrollment =
+          document.getElementById("enrollment").value; window.location.href =
+            `/print?name=${name}&enrollment=${enrollment}`;
+    })
+  </script>
+</body>
+
+</html>
