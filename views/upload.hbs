@@ -27,6 +27,18 @@
             margin-right: 10px;
             cursor: pointer;
         }
+        .options-group {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .options-group label {
+            font-weight: normal;
+            display: inline-block;
+            margin-right: 15px;
+        }
     </style>
 </head>
 <body>
@@ -42,6 +54,16 @@
                 <label for="studentData">Student Data (Excel/CSV):</label>
                 <input type="file" id="studentData" name="studentData" accept=".xlsx,.xls,.csv" required>
                 <small style="display: block; color: #666; margin-top: 5px;">Note: Excel file must contain columns named "Name" and "enrollmentNo"</small>
+            </div>
+
+            <!-- Options Section -->
+            <div class="options-group">
+                <strong>Text Case Options:</strong><br>
+                <label><input type="radio" name="textCase" value="capitalize" checked> Capitalize</label>
+                <label><input type="radio" name="textCase" value="uppercase"> Uppercase</label>
+                <label><input type="radio" name="textCase" value="lowercase"> Lowercase</label>
+                <label><input type="radio" name="textCase" value="Nones"> None</label>
+
             </div>
             
             <div class="btn-group">
